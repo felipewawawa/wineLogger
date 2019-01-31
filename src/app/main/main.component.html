@@ -1,0 +1,7 @@
+<div class="main-page">
+	<i class="material-icons menu-icon" [ngClass]="active ? 'active' : 'inactive'" (click)="toogleBt()">menu</i>
+	<i class="material-icons menu-icon" [ngClass]="active ? 'inactive' : 'active'" (click)="toogleBt()">arrow_back_ios</i>
+
+	<app-side-bar class="side-bar" [ngClass]="active ? 'inactive-bar' : 'active-bar'"></app-side-bar>
+	<app-grid class='grid-view'></app-grid>	
+</div>

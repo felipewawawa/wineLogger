@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+	// to cancel selection highlight: https://css-tricks.com/almanac/properties/u/user-select/;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none !important;          /* Likely future */    
+}
+
+$theme-border: black;
+
+$form-bg: gray;

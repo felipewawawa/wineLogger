@@ -1,0 +1,17 @@
+@import '../../../styles';
+
+
+.form{
+	background-color: $form-bg;
+    top: 0;
+    left: 0;
+    margin: 130px 210px;
+    height: 400px;
+    width: 600px;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu-item{
+	cursor: pointer;
+}
