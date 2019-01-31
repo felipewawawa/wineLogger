@@ -8,6 +8,13 @@
   user-select: none !important;          /* Likely future */
 }
 
+input{
+	-webkit-user-select: auto; 
+	-moz-user-select: auto;    
+	-ms-user-select: auto;     
+	user-select: auto !important;
+}
+
 label{
 	font-size: 14px;
 	color: white;
