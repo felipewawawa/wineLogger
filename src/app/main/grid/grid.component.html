@@ -1,8 +1,8 @@
 <div class="container">
 	<p class="search-title"> {{searchTitle}} </p>
-	<input type="text" [(ngModel)]="filter" placeholder="{{searchPlaceholder}}">
+	<input type="text" [(ngModel)]="query" placeholder="{{searchPlaceholder}}">
 <ul>
-	<li *ngFor="let el of wineList| searchBar:filter">
+	<li *ngFor="let el of wineList| searchBar:query: 'name'">
 		<app-card class="row card" [wine]="el"></app-card>
 	</li>
 </ul>

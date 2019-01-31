@@ -8,6 +8,19 @@
   user-select: none !important;          /* Likely future */
 }
 
-$theme-border: black;
+label{
+	font-size: 14px;
+	color: white;
+}
 
+.btn{
+	background-color: white;
+	color: darkred;
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+$theme-border: black;
+$card-bg: darkred;
+$card-font: white;
 $form-bg: gray;

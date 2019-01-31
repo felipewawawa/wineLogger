@@ -1,13 +1,26 @@
 <div class="card-view">
 	<img style="max-width: 150px;" src="{{wine.image}}" alt="">	
-	<p>{{wine.name}}</p>
-	<p>{{wine.age}}</p>
+
+	<p class="value">
+		<label>{{nameLabel}}:</label>
+		{{wine.name}}
+	</p>
+	<p class="value">
+		<label>{{ageLabel}}:</label>
+		{{wine.age}}
+	</p>
 </div>
 <div class="card-view">
-	<p>{{wine.rating}}</p>
-	<p>{{wine.comment}}</p>
+	<p class="value">
+		<label>{{ratingLabel}}:</label>
+		{{wine.rating}}
+	</p>
+	<p class="value">
+		<label>{{commentLabel}}:</label>
+		{{wine.comment}}
+	</p>
 </div>
 <div class="card-view">
-	<button class="btn btn-primary" type="">Edit</button>
-	<button class="btn btn-secoundary" type="">Remove</button>
+	<button class="btn" type="">Edit</button>
+	<button class="btn" type="">Remove</button>
 </div>

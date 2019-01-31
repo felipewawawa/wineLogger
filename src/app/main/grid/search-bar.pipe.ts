@@ -6,11 +6,11 @@ import { Wine } from '../../model/wine'
 })
 export class SearchBarPipe implements PipeTransform {
 
-    transform(items: any[], filter: Wine): any {
-        if (!items || !filter) {
-            return items;
-        }
-        return items.filter(item => item.name.indexOf(filter.name) !== -1);
+  transform(value: any, query: string, field: string): any {
+      return query ? value.reduce((prev, next) => {
+        if (next[field].includes(query)) { prev.push(next); }
+        return prev;
+      }, []) : value;
     }
 
 }

@@ -2,6 +2,10 @@
 	{
 		"AVATAR": "Welcome, ",
 		"SEARCH_TITLE": "Wine Search\n Search below for your registered wines!",
-		"SIDEBAR_REGISTER": "Register new wine"
+		"SIDEBAR_REGISTER": "Register new wine",
+		"CARD_NAME": "Name",
+		"CARD_AGE": "Age",
+		"CARD_RATING": "Rating",
+		"CARD_COMMENT": "Comment"
 	}
 ]

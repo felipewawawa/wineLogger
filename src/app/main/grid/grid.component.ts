@@ -16,7 +16,7 @@ searchTitle: string;
 
   ngOnInit() {
     this.translateService.getTranslation('en').subscribe((res)=>{
-    this.searchTitle = res[0]['SEARCH_TITLE'];
+    	this.searchTitle = res[0]['SEARCH_TITLE'];
     });
   }
 

@@ -29,6 +29,7 @@
 	pointer-events: none;
 	z-index: 0 !important;
 	&-bar{
+		opacity: 0;
 		width: 0%;
 		padding: 0px !important;
 		border-right: 0px;
@@ -44,7 +45,7 @@
 	padding-left: 10px;
 	flex-direction: column;
     overflow: hidden;
-	transition: width 0.5s, border 0.5s, padding 0.5s;
+	transition: width 0.5s, border 0.5s, padding 0.5s, opacity 0.25s;
 	z-index: 1;
 }
 .grid-view{
