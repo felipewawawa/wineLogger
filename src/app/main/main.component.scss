@@ -11,10 +11,13 @@
 	position: absolute;
 	margin: 20px;
 	cursor: pointer;
+	transition: opacity 0.05s;
 }
 
 .active{
-	display: flex;
+	opacity: 1;
+	pointer-events: auto;
+	z-index: 2;
 	&-bar{
 		width: 100%;
 		margin: 0px;
@@ -22,7 +25,9 @@
 }
 
 .inactive{
-	display: none;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 0 !important;
 	&-bar{
 		width: 0%;
 		padding: 0px !important;
@@ -40,6 +45,7 @@
 	flex-direction: column;
     overflow: hidden;
 	transition: width 0.5s, border 0.5s, padding 0.5s;
+	z-index: 1;
 }
 .grid-view{
 	overflow-y: scroll;

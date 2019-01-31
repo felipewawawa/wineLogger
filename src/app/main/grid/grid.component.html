@@ -1,3 +1,9 @@
-<p>
-  grid works!
-</p>
+<div class="container">
+	<p> {{searchTitle}} </p>
+	<input type="text" [(ngModel)]="filter" placeholder="{{searchPlaceholder}}">
+<ul>
+	<li *ngFor="let el of wineList| searchBar:filter">
+		<app-card class="row card" [wine]="el"></app-card>
+	</li>
+</ul>
+</div>
