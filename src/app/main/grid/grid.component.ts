@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Wine } from '../../model/wine'
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-grid',
@@ -9,10 +10,14 @@ import { Wine } from '../../model/wine'
 export class GridComponent implements OnInit {
 
 @Input() wineList: Wine[];
-searchText: string;
-  constructor() { }
+searchTitle: string;
+  constructor(private translateService: TranslateService) {
+  }
 
   ngOnInit() {
+    this.translateService.getTranslation('en').subscribe((res)=>{
+    this.searchTitle = res[0]['SEARCH_TITLE'];
+    });
   }
 
 }

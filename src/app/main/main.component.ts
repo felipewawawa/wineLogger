@@ -10,6 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class MainComponent implements OnInit {
 active: boolean = false;
+create: boolean = false;
 wines: Wine[] = [];
 
   constructor(private wineService: WineService,
@@ -27,5 +28,14 @@ wines: Wine[] = [];
 
   toogleBt(){
   	this.active = !this.active;
+  }
+
+  toogleForm(){
+    this.create = !this.create;
+  }
+
+  updateList(){
+    this.create = !this.create;
+    this.wines = this.wineService.getWines();
   }
 }

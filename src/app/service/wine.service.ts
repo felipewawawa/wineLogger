@@ -17,7 +17,6 @@ wines: Wine[] = [];
 	}
 
 	fromJson(json: any){
-		let wines: Wine[] = [];
 		let wine: Wine = new Wine();
 		json.filter((el)=>{
 			wine.name = el.name;
@@ -26,9 +25,23 @@ wines: Wine[] = [];
 			wine.comment = el.comment;
 			wine.rating = el.rating;
 
-			wines.push(wine);
+			this.wines.push(wine);
 		});
 
-		return wines;
+		return this.wines;
+	}
+
+	updateWines(wine: Wine){
+		let oldWines = this.wines;
+		this.wines = [];
+		this.wines.push(wine);
+
+		oldWines.forEach((el)=>{
+			this.wines.push(el);
+		})
+	}
+
+	getWines(){
+		return this.wines;
 	}
 }

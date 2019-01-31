@@ -2,6 +2,7 @@
 	<i class="material-icons menu-icon" [ngClass]="active ? 'active' : 'inactive'" (click)="toogleBt()">menu</i>
 	<i class="material-icons menu-icon" [ngClass]="active ? 'inactive' : 'active'" (click)="toogleBt()">arrow_back_ios</i>
 
-	<app-side-bar class="side-bar" [ngClass]="active ? 'inactive-bar' : 'active-bar'"></app-side-bar>
+	<app-side-bar class="side-bar" [ngClass]="active ? 'inactive-bar' : 'active-bar'" (create)="toogleForm()"></app-side-bar>
 	<app-grid class='grid-view' [wineList]="wines"></app-grid>
+	<app-form class="form" *ngIf="create" (cancel)="toogleForm()" (updated)="updateList()"></app-form>
 </div>

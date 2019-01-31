@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -7,7 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
-create: boolean = false;
+@Output() create = new EventEmitter<boolean>();
 avatar: string = "";
 createLabel: string = ""
   constructor(private translateService: TranslateService) {
@@ -15,13 +15,12 @@ createLabel: string = ""
 
   ngOnInit() {
     this.translateService.getTranslation('en').subscribe((res)=>{
-      console.log(res)
     this.avatar = res[0]['AVATAR'];
     this.createLabel = res[0]['SIDEBAR_REGISTER'];
     });
   }
 
 	createBt(){
-		this.create = !this.create;
+    this.create.emit();
 	}
 }

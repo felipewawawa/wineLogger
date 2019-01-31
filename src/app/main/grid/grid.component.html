@@ -1,5 +1,5 @@
 <div class="container">
-	<p> {{searchTitle}} </p>
+	<p class="search-title"> {{searchTitle}} </p>
 	<input type="text" [(ngModel)]="filter" placeholder="{{searchPlaceholder}}">
 <ul>
 	<li *ngFor="let el of wineList| searchBar:filter">
